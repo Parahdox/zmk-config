@@ -1,0 +1,22 @@
+/dts-v1/;
+
+/ {
+    chosen {
+        zmk,display-left = &ssd1306;
+    };
+};
+
+&i2c0 {
+    status = "okay";
+    ssd1306: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        segment-remap;
+        prechargep = <0x22>;
+        com-invdir;
+        com-seq;
+        vcomh = <0x20>;
+    };
+};
