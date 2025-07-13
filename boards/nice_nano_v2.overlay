@@ -31,7 +31,7 @@
         spi-max-frequency = <4000000>;
         
         /* WS2812 */
-        chain-length = <29>; /* number of LEDs - adjust for your Lily58 */
+        chain-length = <64>; /* number of LEDs - adjust for your Lily58 */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
         
