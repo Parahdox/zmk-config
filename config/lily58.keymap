@@ -52,12 +52,7 @@
                 &kp LSHFT    &trans      &trans       &kp LPAR     &kp LBRC     &trans    &trans   &kp DEL  &kp RBRC     &kp RPAR    &kp PLUS &kp LBRC &kp RBRC    &kp RSHFT
                                          &trans       &trans       &trans       &trans    &trans   &trans   &trans       &trans
             >;
-            sensor-bindings = <
-                &inc_dec_kp C_VOL_UP C_VOL_DN
-                &rgb_ug RGB_BRI RGB_DIM
-                &rgb_ug RGB_SPD RGB_SPD_D
-                &rgb_ug RGB_HUI RGB_HUD
-            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
