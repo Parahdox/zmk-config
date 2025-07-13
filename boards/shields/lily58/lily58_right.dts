@@ -1,1 +1,11 @@
 /dts-v1/;
+
+/ {
+    rotary_encoder {
+        compatible = "alps,ec11";
+        status = "okay";
+        a-gpios = <&gpio0 P0.31 0>;
+        b-gpios = <&gpio0 P0.29 0>;
+        resolution = <4>;
+    };
+};
