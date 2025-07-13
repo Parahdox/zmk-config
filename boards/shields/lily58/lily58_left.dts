@@ -1,4 +1,5 @@
 /dts-v1/;
+
 / {
     chosen {
         zmk,display-left = &ssd1306;
@@ -24,9 +25,7 @@
 &spi1 {
     compatible = "nordic,nrf-spim";
     status = "okay";
-    
-    pinctrl-0 = <&spi1_default>;
-    pinctrl-names = "default";
+    mosi-pin = <6>;
     
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
@@ -39,13 +38,5 @@
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-    };
-};
-
-&pinctrl {
-    spi1_default: spi1_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 9)>;
-        };
     };
 };
